@@ -23,11 +23,11 @@ _Slide 2_
 
 ![slide 2](images/Slide2.png)
 
-What are proteomes? Are they just parts lists? Most parts lists also specify the number of each type of part. Don’t you sort the bag of fasteners from that IKEA purchase, count the items, and compare that to the parts list in the instructions before you start putting it together? We can do similar checks when we measure whole proteomes (a list of protein present in the samples and some relative abundance measure that can be used to rank proteins from high abundance to low abundance). There is usually a lot that is known about any sample type from years of prior study. A logical first sanity check is whether the proteome you measured bears some resemblance to what was known about the proteome. LC systems and mass spectrometers have limited dynamic ranges, and many proteomes can have larger dynamic ranges. You can’t identify proteins below the measuring system’s limit of detection no matter how much mass spec noise you impute. Most studies now focus on quantitation, and the limit of quantification is always less than the limits of detection. Whole proteomes can help you figure out ballpark limits of detection and limits of quantitation so don’t look like a fool when analyzing the data.
+What are proteomes? Are they just parts lists? Most parts lists also specify the number of each type of part. Don’t you sort the bag of fasteners from that IKEA purchase, count the items, and compare that to the parts list in the instructions before you start putting it together? We can do similar checks when we measure whole proteomes (a list of protein present in the samples and some relative abundance measure that can be used to rank proteins from high abundance to low abundance). There is usually a lot that is known about any sample type from years of prior study. A logical first sanity check is whether the proteome you measured bears some resemblance to what was known about the proteome. LC systems and mass spectrometers have limited dynamic ranges, and many proteomes can have larger dynamic ranges. You can’t identify proteins below the measuring system’s limit of detection no matter how much mass spec noise you impute. Most studies now focus on quantitation, and the limits of quantification are always less than the limits of detection. Whole proteomes can help you figure out ballpark limits of detection and limits of quantitation so don’t look like a fool when analyzing the data.
 
 Body fluids  and cell lysates have very different proteomes. Proteomes with a smaller number of highly abundant proteins have profound implications for data normalization and statistical testing. Cell lysates with broad distributions of protein relative abundances are much more forgiving when it come to data analysis choices.
 
-There is too little consensus in the filed about contaminants. Common contaminants, such as, trypsin autolysis peptides, hair and skin keratins (unless you are studying hair and/or skin) should be excluded from downstream data analysis. What about blood proteins? Do you use bovine serum albumin to check your instrument performance? Do your samples have significant blood components? Plasma and serum certainly do. Should albumin be a protein in a common contaminants collection? Should albumin always be considered a contaminant protein? Immunoglobulin proteins in bio fluids are another issue. Immunoglobulins are overrepresented in FASTA files (how to represent immunoglobulins in protein sequence collections is far more complicated a topic that you would imagine). In bottom-up experiments, immunoglobulin complexes are disrupted and digested into peptides. Any knowledge of where immunoglobulin peptides might have come from (IgG, IgA, etc.) are lost and not recoverable. Immunoglobulins in bio fluids should be reported and quantified as one protein family.
+There is too little consensus in the field about contaminants. Common contaminants such as trypsin autolysis peptides and hair and skin keratins (unless you are studying hair and/or skin) should be excluded from downstream data analysis. What about blood proteins? Do you use bovine serum albumin to check your instrument performance? Do your samples have significant blood components? Plasma and serum certainly do. Should albumin be a protein in a common contaminants collection? Should albumin always be considered a contaminant protein? Immunoglobulin proteins in bio fluids are another issue. Immunoglobulins are overrepresented in FASTA files (how to represent immunoglobulins in protein sequence collections is far more complicated a topic that you would imagine). In bottom-up experiments, immunoglobulin complexes are disrupted and digested into peptides. Any knowledge of where immunoglobulin peptides might have come from (IgG, IgA, etc.) are lost and not recoverable. Immunoglobulins in bio fluids should be reported and quantified as one protein family.
 
 There are many examples of more complicated proteome contamination situations. Some tissues are difficult to dissect cleanly and may have variable contamination from adjacent tissues (that likely have different proteomes). Many secreted bio fluids have dynamics to need to be considered. Stimulated tears (crying, from irritation in the eye, dry air, cold air, etc.) have a different composition from basil tearing. Saliva also has stimulated parotid gland secretion in response to mechanical chewing, levels of acid in foods, etc.) that changes the composition of saliva compared to the unstimulated state.
 
@@ -57,7 +57,7 @@ _Slide 5_
 
 ![slide 5](images/Slide5.png)
 
-The total intensity of the 88 muscle proteins in combination with all the other QC evidence, clearly shows that the 4 proteins that cluster on the left side of the MDS plot have high levels of muscle contamination. The 2 proteins in the center of the cluster plot have lower muscle contamination levels but are still distinguishable from non-contaminated samples. The scatter plot on the right has the 88 muscle proteins highlighted in red. The WT-3957 intensities are the y-axis values. The x-axis values are the average of the other 5 WT samples. The muscle proteins are clearly the second proteome in the QC notebook sample-to-sample scatter plots. Note that these proteins are also present in the mammy gland cells because the points fall on a diagonal trend line rather than along the y-axes. These 88 proteins are probably a subset of the contaminating muscle proteome.
+The total intensity of the 88 muscle proteins in combination with all the other QC evidence, clearly showed that 4 proteins that clustered on the left side of a QC MDS plot had high levels of muscle contamination. The 2 proteins in the center of the cluster plot had lower muscle contamination levels but were still distinguishable from non-contaminated samples. The scatter plot on the right has the 88 muscle proteins highlighted in red. The WT-3957 intensities are the y-axis values. The x-axis values are the average of the other 5 WT samples. The muscle proteins are clearly the second proteome in the QC notebook sample-to-sample scatter plots. Note that these proteins are also present in the mammary gland cells because the points fall on a diagonal trend line rather than along the y-axes. These 88 proteins are probably a subset of the contaminating mouse abdominal muscle proteome.
 
 ---
 
@@ -81,7 +81,7 @@ _Slide 8_
 
 ![slide 8](images/Slide8.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+The biological groups are color coded, and the samples of the same color do not appear to cluster together. The x-axis dimension captures about 7 times more variance than the y-axis, so the left-side and right-side clustering is the dominant feature. To see what is different between the samples in the two cluster regions, the average intensities of the proteins for the left-side samples were computed and compared to the average intensities of the proteins from the right-side samples.
 
 ---
 
@@ -89,7 +89,7 @@ _Slide 9_
 
 ![slide 9](images/Slide9.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+The scatter plots of TMT intensities in these types of TMT experiments should fall along a single trend line, and they typically have correlation coefficients close to 1. These scatter plot may also have a small number of proteins off the diagonal trend line (DE candidates) and proteins at lower intensity may have more dispersion. This scatter plot has a fork-like appearance for the most abundant proteins suggesting a superposition of more than one proteome. The very low correlation coefficient of 0.3 for the black trend line is very unusual. The density of points in these plots can be deceptive. There are over 3,500 proteins and most of them are associated with the black trend line.
 
 ---
 
@@ -97,7 +97,7 @@ _Slide 10_
 
 ![slide 10](images/Slide10.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+The distribution of protein abundance ratios also have typical patterns in these experiments. The frequency histogram of the log2 of the ratios is usually a single Gaussian-like distribution centered at zero (if the normalization worked well). These experiments typically have mostly unchanged proteins with smaller numbers of DE candidates falling outside the main distribution. When comparing the average of the clustering left-side samples to the right-side samples, there is a large excess of positive fold-change proteins. The main distribution is a little to the left of center, and there should not be many “unchanged” proteins with log fold changes greater than 1 (2-fold change). Proteins with fold changes greater than 2-fold was used as the criteria to identify the contaminating proteome(s).
 
 ---
 
@@ -105,14 +105,15 @@ _Slide 11_
 
 ![slide 11](images/Slide11.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+The fold change cutoff was used to identify 540 likely contaminant proteins. These proteins included the blood proteins (hemoglobins, albumin, and other top-20 serum proteins). The total intensity of the 540 proteins is quite large in 11 of 18 samples, and much lower in the other 7 samples. Blood proteins mostly tracked the high or low intensity pattern but also show some differences.
 
 ---
 
 _Slide 12_
+
 ![slide 12](images/Slide12.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+There were many “cytochrome” proteins in the 3,542 identified proteins. They were highly enriched in the “other” proteome (28 of 36). The total intensities of the cytochrome proteins are much less than the total intensity of the 540 “other” proteins but have a very similar pattern across the samples. The “other” proteome and the main proteome can have some of the same proteins (but they could be at dramatically different relative abundances) or the proteins could be mostly distinct (nothing is ever 100% distinct in proteomics data). Individual proteins could be mostly one proteome, or mostly the other proteome, or any mixture in between. Separating mixed proteomes into distinct proteomes may be trivial or extremely challenging. Ever sample and every proteome seems to be different. There are no safe and/or general assumptions that will hold.
 
 ---
 
@@ -120,7 +121,9 @@ _Slide 13_
 
 ![slide 13](images/Slide13.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+This project’s analysis was just started. The main proteome and the other proteome are not distinct (non-overlapping) sets of proteins. Any “other” protein not present in the main proteome should lie along the y-axis, not fall along a diagonal. It is important to point out that the nature of TMT tags do not allow very good measurements of zero intensity. It is not clear if samples with “other” proteome can be used or need to be excluded. The presence of the “other” proteome severely affects normalizations and statistical testing results.
+
+Note that the arbitrary grouping of samples by which side of the MDS cluster plot they come from is what is being shown here. This is to find the proteins (that are present in both proteomes) that have the highest levels of contamination. The true biological samples are different. The caution here is that more proteins than the 540 red proteins could have contaminant intensity and that may affect the statistical testing (false positives and negatives). The left-side versus right-side comparison find the subset of proteins with the highest contamination levels.
 
 ---
 
@@ -128,7 +131,7 @@ _Slide 14_
 
 ![slide 14](images/Slide14.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+The strategy of excluding a moderate list of proteins (540-ish) most likely to be associated with the contaminant proteome looks better for this experiment. There are many biological groups and more than 50% of the samples have likely contamination. Most biological groups have contaminated samples. Excluding those samples would leave too few samples per group for statistical analyses. Proteins associated with the other proteome can be identified using the MDs clustering categorization. Excluding several hundred proteins will have consequences. Many of those proteins are probably present in both the main aorta proteome and in the contaminating proteome and could be of biological interest. There may also be other proteins that have smaller levels of contamination that is still high enough to create false positive or false negative statistical testing results.
 
 ---
 
@@ -136,7 +139,9 @@ _Slide 15_
 
 ![slide 15](images/Slide15.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+Bio fluids are another type of sample where the concept of contaminant proteomes can be seen. Tears and saliva are of interest as less invasive bio fluids to collect (compared to blood) for systemic health/disease monitoring. Tears are a mixture of lacrimal gland secretions and proteins from other eye orbit sources. The lacrimal gland proteome is several hundred proteins, and the lacrimal gland output can be very dynamic (watching a sad movie, chopping onions, getting something irritating in your eye, etc.). Dramatic increases in the lacrimal gland output will severely distort the tear proteome. Protocols to collect basal (unstimulated) tears are very important for tear studies to have any validity.
+
+Saliva also has complications with unstimulated saliva and stimulated saliva. The parotid gland has watery secretions with tons of amylase, and its output is stimulated by the mechanical pressure of chewing or by acids in foods (citric acid on the tongue is the classic way to stimulate parotid secretion). Stimulated saliva and unstimulated saliva have very different compositions. It takes considerable time and effort to learn how to collect bio fluids in ways that facilitate proteomic studies. You do not just collect some tears or saliva and run it on the instrument.
 
 ---
 
@@ -144,7 +149,13 @@ _Slide 16_
 
 ![slide 16](images/Slide16.png)
 
-A zebrafish lens study using DIA was recently published in JASMS and I was curious what the data was like (I have not generated any DIA data personally).
+Identifying potential contaminating proteomes in samples is one of many biologically relevant ways that whole proteome information can be used. Summarizing protein abundance measurements (MS1 feature intensities, TMT reporter ion intensities, fragment ion intensity weighted spectral counts, DIA intensities, etc.) to create whole proteome information is extremely valuable. It enables a rich variety of quality control metrics to be computed.
+
+Abundances of common contaminants can be tracked across samples to assess the quality of sample processing. Potential contaminating tissue proteomes can be identified. Total abundances of groups of proteins (families like immunoglobulin or cytochrome proteins, for example) can be compared between samples. There are other important biological information in proteome summarizations.
+
+This is your opportunity to learn about the proteome you are studying. Is the proteome you are measuring a good representation of what previous studies have shown? Did you use a FASTA file that had the proteins you expected to be in your proteome? Did you mistakenly use a fully tryptic search for bio fluid samples (which have many semi-tryptic peptides)? Do you need to redo some upstream data processing steps? Is the proteome dominated by a small number of highly abundant proteins or large numbers of intermediate abundance proteins? The characteristics of the proteome under study can have profound implications for normalization and statistical testing strategies. Have you determined some robust criteria for peptide/protein identification and some way to determine a workable limit of quantitation? (Hint: if you are imputing data, you are probably doing something wrong.)
+
+The proteomics field has had the capability to generate proteome information for many years. Maybe it time to finally make use of it?
 
 ---
 
