@@ -159,7 +159,7 @@ This is your opportunity to learn about the proteome you are studying. Is the pr
 
 Is the proteome dominated by a small number of highly abundant proteins or large numbers of intermediate abundance proteins? The characteristics of the proteome under study can have profound implications for normalization and statistical testing strategies. Have you determined some robust criteria for peptide/protein identification and some way to determine a workable limit of quantitation? (Hint: if you are imputing data, you are probably doing something wrong.)
 
-The proteomics field has had the capability to generate proteome information for many years. Maybe it time we finally make use of it?
+The proteomics field has had the capability to generate proteome information for many years. Maybe it's time we finally make use of it?
 
 ---
 
