@@ -105,7 +105,7 @@ _Slide 11_
 
 ![slide 11](images/Slide11.png)
 
-The fold change cutoff was used to identify 540 likely contaminant proteins. These proteins included the blood proteins (hemoglobins, albumin, and other top-20 serum proteins). The total intensity of the 540 proteins is quite large in 11 of 18 samples, and much lower in the other 7 samples. Blood proteins mostly tracked the high or low intensity pattern but also show some differences.
+The fold change cutoff was used to identify 540 likely contaminant proteins. These proteins included the blood proteins (hemoglobins, albumin, and other top-20 serum proteins). The total intensity of the 540 proteins is quite large in 11 of 18 samples, and much lower in the other 7 samples. Blood proteins mostly tracked the high or low intensity pattern but also showed some differences.
 
 ---
 
@@ -113,7 +113,7 @@ _Slide 12_
 
 ![slide 12](images/Slide12.png)
 
-There were many “cytochrome” proteins in the 3,542 identified proteins. They were highly enriched in the “other” proteome (28 of 36). The total intensities of the cytochrome proteins are much less than the total intensity of the 540 “other” proteins but have a very similar pattern across the samples. The “other” proteome and the main proteome can have some of the same proteins (but they could be at dramatically different relative abundances) or the proteins could be mostly distinct (nothing is ever 100% distinct in proteomics data). Individual proteins could be mostly one proteome, or mostly the other proteome, or any mixture in between. Separating mixed proteomes into distinct proteomes may be trivial or extremely challenging. Ever sample and every proteome seems to be different. There are no safe and/or general assumptions that will hold.
+There were many cytochrome proteins in the 3,542 identified proteins. They were highly enriched in the “other” proteome (28 of 36). The total intensities of the cytochrome proteins are much less than the total intensity of the 540 “other” proteins but have a very similar pattern across the samples. The other proteome and the main proteome can have some of the same proteins (but they could be at dramatically different relative abundances) or the proteins could be mostly distinct (nothing is ever 100% distinct in proteomics data). Individual proteins could be mostly one proteome, or mostly the other proteome, or any mixture in between. Separating mixed proteomes into distinct proteomes may be trivial or extremely challenging. Ever sample and every proteome seems to be different. There are no safe and/or general assumptions that will hold.
 
 ---
 
@@ -121,9 +121,9 @@ _Slide 13_
 
 ![slide 13](images/Slide13.png)
 
-This project’s analysis was just started. The main proteome and the other proteome are not distinct (non-overlapping) sets of proteins. Any “other” protein not present in the main proteome should lie along the y-axis, not fall along a diagonal. It is important to point out that the nature of TMT tags do not allow very good measurements of zero intensity. It is not clear if samples with “other” proteome can be used or need to be excluded. The presence of the “other” proteome severely affects normalizations and statistical testing results.
+This project’s analysis is ongoing. The main proteome and the other proteome are not distinct (non-overlapping) sets of proteins. Any “other” protein not present in the main proteome should lie along the y-axis, not fall along a diagonal. It is important to point out that the nature of TMT tags do not allow very good measurements of zero intensity. It is not clear if samples with “other” proteome can be used or need to be excluded. The presence of the “other” proteome severely affects normalizations and statistical testing results.
 
-Note that the arbitrary grouping of samples by which side of the MDS cluster plot they come from is what is being shown here. This is to find the proteins (that are present in both proteomes) that have the highest levels of contamination. The true biological samples are different. The caution here is that more proteins than the 540 red proteins could have contaminant intensity and that may affect the statistical testing (false positives and negatives). The left-side versus right-side comparison find the subset of proteins with the highest contamination levels.
+Note that the arbitrary grouping of samples by which side of the MDS cluster plot they come from is what is being shown here. This is to find the proteins (that are present in both proteomes) that have the highest levels of contamination. The true biological samples are different. The caution here is that more proteins than the 540 red proteins could have contaminant intensity and that may affect the statistical testing (false positives and negatives). The left-side versus right-side comparison finds the subset of proteins with the highest contamination levels.
 
 ---
 
@@ -131,7 +131,9 @@ _Slide 14_
 
 ![slide 14](images/Slide14.png)
 
-The strategy of excluding a moderate list of proteins (540-ish) most likely to be associated with the contaminant proteome looks better for this experiment. There are many biological groups and more than 50% of the samples have likely contamination. Most biological groups have contaminated samples. Excluding those samples would leave too few samples per group for statistical analyses. Proteins associated with the other proteome can be identified using the MDs clustering categorization. Excluding several hundred proteins will have consequences. Many of those proteins are probably present in both the main aorta proteome and in the contaminating proteome and could be of biological interest. There may also be other proteins that have smaller levels of contamination that is still high enough to create false positive or false negative statistical testing results.
+The strategy of excluding a moderate list of proteins (540-ish) most likely to be associated with the contaminant proteome looks better for this experiment. There are many biological groups and more than 50% of the samples have likely contamination. Most biological groups have contaminated samples. Excluding those samples would leave too few samples per group for statistical analyses. Proteins associated with the other proteome can be identified using the MDS clustering categorization.
+
+Excluding several hundred proteins will have consequences. Many of those proteins are probably present in both the main aorta proteome and in the contaminating proteome and could be of biological interest. There may also be other proteins that have smaller levels of contamination that is still high enough to create false positive or false negative statistical testing results.
 
 ---
 
@@ -149,13 +151,15 @@ _Slide 16_
 
 ![slide 16](images/Slide16.png)
 
-Identifying potential contaminating proteomes in samples is one of many biologically relevant ways that whole proteome information can be used. Summarizing protein abundance measurements (MS1 feature intensities, TMT reporter ion intensities, fragment ion intensity weighted spectral counts, DIA intensities, etc.) to create whole proteome information is extremely valuable. It enables a rich variety of quality control metrics to be computed.
+Identifying potential contaminating proteomes in samples is one of many biologically relevant ways that whole proteome information can be used. Summarizing protein abundance measurements (MS1 feature intensities, TMT reporter ion intensities, fragment ion intensity weighted spectral counts, DIA intensities, etc.) to create whole proteome information is extremely valuable. It enables a rich variety of quality control metrics to be computed and visualized.
 
-Abundances of common contaminants can be tracked across samples to assess the quality of sample processing. Potential contaminating tissue proteomes can be identified. Total abundances of groups of proteins (families like immunoglobulin or cytochrome proteins, for example) can be compared between samples. There are other important biological information in proteome summarizations.
+Abundances of common contaminants can be tracked across samples to assess the quality of sample processing. Potential contaminating tissue proteomes can be identified. Total abundances of groups of proteins (families like immunoglobulin or cytochrome proteins, for example) can be compared between samples. There is a great deal of important biological information in whole proteome summarizations.
 
-This is your opportunity to learn about the proteome you are studying. Is the proteome you are measuring a good representation of what previous studies have shown? Did you use a FASTA file that had the proteins you expected to be in your proteome? Did you mistakenly use a fully tryptic search for bio fluid samples (which have many semi-tryptic peptides)? Do you need to redo some upstream data processing steps? Is the proteome dominated by a small number of highly abundant proteins or large numbers of intermediate abundance proteins? The characteristics of the proteome under study can have profound implications for normalization and statistical testing strategies. Have you determined some robust criteria for peptide/protein identification and some way to determine a workable limit of quantitation? (Hint: if you are imputing data, you are probably doing something wrong.)
+This is your opportunity to learn about the proteome you are studying. Is the proteome you are measuring a good representation of what previous studies have shown? Are there important proteins that are missing (why)? Did you use a FASTA file that had the proteins you expected to be in your proteome? Did you mistakenly use a fully tryptic search for bio fluid samples (which have many semi-tryptic peptides)? Do you need to redo some upstream data processing steps?
 
-The proteomics field has had the capability to generate proteome information for many years. Maybe it time to finally make use of it?
+Is the proteome dominated by a small number of highly abundant proteins or large numbers of intermediate abundance proteins? The characteristics of the proteome under study can have profound implications for normalization and statistical testing strategies. Have you determined some robust criteria for peptide/protein identification and some way to determine a workable limit of quantitation? (Hint: if you are imputing data, you are probably doing something wrong.)
+
+The proteomics field has had the capability to generate proteome information for many years. Maybe it time we finally make use of it?
 
 ---
 
